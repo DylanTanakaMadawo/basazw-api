@@ -13,13 +13,7 @@ router.use(
     // optionsSuccessStatus: 200,
   })
 );
-
-// router.use(express.json({ limit: 50000 }));
-// router.use(express.urlencoded({ extended: false }));
-
-// router.use(bodyParser.json({ limit: "25mb" }));
-// router.use(express.urlencoded({ limit: 52428800 }));
-// router.use(express.urlencoded({ limit: "25mb" }));
+router.options("*", cors());
 
 //Route to post
 router.post("/", async (req, res) => {

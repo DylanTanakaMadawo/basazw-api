@@ -20,6 +20,7 @@ router.use(
     // optionsSuccessStatus: 200,
   })
 );
+router.options("*", cors());
 
 router.get("/", test);
 router.post("/signup", registerUser);
