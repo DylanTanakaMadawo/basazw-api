@@ -10,10 +10,12 @@ router.use(
     credentials: true,
     // origin: "http://localhost:3000",
     origin: "https://basazw.onrender.com/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
     // optionsSuccessStatus: 200,
   })
 );
-router.options("*", cors());
+// router.options("*", cors());
 
 //Route to post
 router.post("/", async (req, res) => {
