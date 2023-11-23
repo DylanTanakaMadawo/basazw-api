@@ -1,6 +1,6 @@
 import express from "express";
-import { MONGODB_URL } from "./config.js";
-// import { PORT, MONGODB_URL } from "./config.js";
+// import { MONGODB_URL } from "./config.js";
+import { PORT, MONGODB_URL } from "./config.js";
 import { Post } from ".//Models/postModels.js";
 import postRoutes from "./Routes/postRoutes.js";
 import authRoutes from "./Routes/authRoutes.js";
@@ -41,7 +41,7 @@ mongoose
   .then(() => {
     console.log("App connected to database");
     app.listen(PORT, () => {
-      console.log(`App is listening on port: ${process.env.PORT}`);
+      console.log(`App is listening on port: ${PORT}`);
     });
   })
   .catch((err) => {
