@@ -1,6 +1,6 @@
 import express from "express";
-// import { MONGODB_URL } from "./config.js";
-import { PORT, MONGODB_URL } from "./config.js";
+import { MONGODB_URL } from "./config.js";
+// import { PORT, MONGODB_URL } from "./config.js";
 import { Post } from ".//Models/postModels.js";
 import postRoutes from "./Routes/postRoutes.js";
 import authRoutes from "./Routes/authRoutes.js";
@@ -13,6 +13,8 @@ import cookieParser from "cookie-parser";
 import "dotenv/config";
 
 const app = express();
+
+const PORT = process.env.PORT || 8000;
 
 // dotenv.config();
 
