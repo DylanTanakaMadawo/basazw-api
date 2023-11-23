@@ -1,5 +1,6 @@
 import express from "express";
-import { PORT, MONGODB_URL } from "./config.js";
+import { MONGODB_URL } from "./config.js";
+// import { PORT, MONGODB_URL } from "./config.js";
 import { Post } from ".//Models/postModels.js";
 import postRoutes from "./Routes/postRoutes.js";
 import authRoutes from "./Routes/authRoutes.js";
@@ -25,7 +26,8 @@ app.use(function (req, res, next) {
 });
 
 app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ limit: "50mb" }));
+app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ limit: "50mb" }));
 
 app.use(express.json());
 
@@ -39,7 +41,7 @@ mongoose
   .then(() => {
     console.log("App connected to database");
     app.listen(PORT, () => {
-      console.log(`App is listening on port: ${PORT}`);
+      console.log(`App is listening on port: ${process.env.PORT}`);
     });
   })
   .catch((err) => {
