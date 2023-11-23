@@ -12,15 +12,6 @@ const router = express.Router();
 // const app = express();
 // router.use(cors());
 router.use(cookieParser());
-router.use(
-  cors({
-    credentials: true,
-    origin: "https://basazw.onrender.com/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
-// router.options("*", cors());
 
 router.get("/", test);
 router.post("/signup", registerUser);
