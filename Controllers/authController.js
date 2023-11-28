@@ -78,7 +78,9 @@ const loginUser = async (req, res) => {
             // console.log("ka erro kanyama");
           }
           // console.log("success nyama!!!!");
-          res.cookie("token", token).json(user);
+          res
+            .cookie("token", token, { sameSite: "none", secure: true })
+            .json(user);
         }
       );
     }
