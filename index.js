@@ -34,8 +34,8 @@ app.use(function (req, res, next) {
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
-    // origin: "https://basazw.onrender.com",
+    // origin: "http://localhost:3000",
+    origin: "https://basazw.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
     optionsSuccessStatus: 200,
