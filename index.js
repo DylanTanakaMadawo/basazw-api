@@ -17,8 +17,8 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use(function (req, res, next) {
-  // res.setHeader("Access-Control-Allow-Origin", "https://basazw.onrender.com");
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "https://basazw.onrender.com");
+  // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
